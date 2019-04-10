@@ -9,15 +9,19 @@
   }
 
   // When enter key is pressed inside input field:
-  $(inputField).keypress(function(event) {
+  //$(inputField).keypress(function(event) {
+    $(inputField).keydoqn(function(event){
+      var key = event.charCode ? event.charCode : event.keyCode ? event.keyCode : 0;
 
     // clears all innerHTML
     $(".cards").text("");
     $("h2").text("");
 
     // 13 = return keypress
-    if(event.which === 13)
+    //if(event.which === 13)
+    if(key === 13)
     {
+      e.preventDefault();
       // check input has a valid zipcode
       // DOM will throw this error and this if statement is not executed:
       // {"error":{"code":1006,"message":"No matching location found."}
