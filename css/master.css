@@ -1,0 +1,71 @@
+[class*='col-'] {
+  float: left;
+  min-height:  1px;
+}
+
+/* For mobile phones: */
+@media only screen and (max-width: 599px) {
+  [class*="col-"] {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  /* For desktop: */
+  .col-1 {width: 14.28%;}
+  .col-2 {width: 28.57%;}
+  .col-3 {width: 42.85%;}
+  .col-4 {width: 57.13%;}
+  .col-5 {width: 71.41%;}
+  .col-6 {width: 85.69%;}
+  .col-7 {width: 58.33%;}
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  background-image: linear-gradient(to right, #dff9fb, #F8EFBA);
+  color: #2c3e50;
+}
+
+h1, h2 {
+  font-family: 'Chivo', sans-serif;
+}
+
+header {
+  text-align: center;
+}
+
+
+header input[type="text"] {
+  color: #2c3e50;
+  font-size: 1.5em;
+  border-radius: 8px;
+  text-align: center;
+}
+
+header input[type="text"]:focus {
+  outline: none;
+}
+
+main h2 {
+  text-align: center;
+}
+
+/* wrapper for forecast articles */
+.cards {
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: center;
+}
+
+article {
+  /* flex-shrink: 0; */
+  flex: 1;
+  flex-grow: 0; /* this line prevents the articles from expanding */
+  margin: 10px;
+  color: #F8EFBA;
+  background-color: #7f8c8d;
+  text-align: center;
+  border-radius: 2%;
+  padding: 0 20px;
+}
